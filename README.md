@@ -1,5 +1,5 @@
 Liveasy Backend Development Assignment
-Overview
+
 This project is a backend service developed as part of the Liveasy assignment for the backend development role. The service is built using the Spring Boot framework, with PostgreSQL as the database. The APIs developed in this project align with the requirements provided in the assignment documentation.
 
 Tech Stack
