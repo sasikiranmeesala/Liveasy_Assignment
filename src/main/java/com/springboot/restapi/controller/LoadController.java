@@ -38,7 +38,7 @@ public class LoadController {
     public ResponseEntity<LoadClass> updateload(@PathVariable("id")long id, @RequestBody LoadClass loadclass) {
     	serviceImplimentation.loadid(id);		
         LoadClass updated = serviceImplimentation.update(loadclass);
-        return  ResponseEntity.status(HttpStatus.CREATED).body("Load details updated successfully");
+        return  ResponseEntity.ok(updated);
     }
     
     
