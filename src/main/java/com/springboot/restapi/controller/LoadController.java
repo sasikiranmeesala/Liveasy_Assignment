@@ -38,7 +38,7 @@ public class LoadController {
     public ResponseEntity<LoadClass> updateload(@PathVariable("id")long id, @RequestBody LoadClass loadclass) {
     	serviceImplimentation.loadid(id);		
         LoadClass updated = serviceImplimentation.update(loadclass);
-        return ResponseEntity.ok(updated);
+        return  ResponseEntity.status(HttpStatus.CREATED).body("Load details updated successfully");
     }
     
     
@@ -70,6 +70,6 @@ public class LoadController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleted(@PathVariable("id") long id) {
         serviceImplimentation.delete(id);
-        return ResponseEntity.noContent().build();  // 204 No Content
+        return  ResponseEntity.status(HttpStatus.CREATED).body("Load details deleted successfully");  
     }
 }
